@@ -12,4 +12,8 @@ app.get("/about", function(req, res) {
   res.sendFile(__dirname + "/views/about.html");
 });
 
+app.get("/health", function(req, res) {
+  res.json({ status: "ok" });
+});
+
 app.listen(3000, () => console.log("port 3000 is listenning"));
